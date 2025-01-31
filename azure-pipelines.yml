@@ -7,7 +7,7 @@ pool: default
 steps:
   - task: Maven@4
     inputs:
-      mavenPomFile: 'pom.xml'   # Path to your pom.xml
+      mavenPomFile: 'D:\Devop_Agent\1\s\demo\pom.xml'   # Path to your pom.xml
       goals: 'clean install'     # Define Maven goals
       publishJUnitResults: true  # Publish test results
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
