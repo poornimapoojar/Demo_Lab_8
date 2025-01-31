@@ -1,8 +1,8 @@
 trigger:
   - master  # Adjust branch as needed
 
-pool:
-  vmImage: 'ubuntu-latest'  # Or 'windows-latest'
+pool: default
+
 
 steps:
   - task: Maven@4
