@@ -8,7 +8,7 @@ steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'D:\Devop_Agent\1\s\demo\pom.xml'
-    goals: 'test'
+    goals: 'clean test'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
@@ -16,3 +16,5 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
+
