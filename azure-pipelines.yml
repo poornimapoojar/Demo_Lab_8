@@ -1,0 +1,20 @@
+trigger:
+  - master  # Adjust branch as needed
+
+pool: default
+
+
+steps:
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'D:\Devop_Agent\1\s\demo\pom.xml'
+    goals: 'clean test'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
+
